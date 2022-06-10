@@ -266,7 +266,7 @@ public class SVGRoot extends Group
 
         
         Rectangle deviceViewport = diagram.getDeviceViewport();
-        if (width != null && height != null)
+        if (width != null && height != null && !diagram.ignoringSizeAttributes())
         {
             float xx, yy, ww, hh;
             

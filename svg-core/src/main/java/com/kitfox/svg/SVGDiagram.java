@@ -81,6 +81,12 @@ public class SVGDiagram implements Serializable
     protected boolean ignoreClipHeuristic = false;
 
     /**
+     * If true, the width and height presentation attributes in SVGElements are
+     * ignored and the device viewport is used.
+     */
+    protected boolean ignoreSizeAttributes = false;
+
+    /**
      * URL which uniquely identifies this document
      */
 //    final URI docRoot;
@@ -244,6 +250,10 @@ public class SVGDiagram implements Serializable
     public boolean ignoringClipHeuristic() { return ignoreClipHeuristic; }
 
     public void setIgnoringClipHeuristic(boolean ignoreClipHeuristic) { this.ignoreClipHeuristic = ignoreClipHeuristic; }
+
+    public boolean ignoringSizeAttributes() { return ignoreSizeAttributes; }
+
+    public void setIgnoringSizeAttributes(boolean ignoreSizeAttributes) { this.ignoreSizeAttributes = ignoreSizeAttributes; }
 
     /**
      * Updates all attributes in this diagram associated with a time event.
